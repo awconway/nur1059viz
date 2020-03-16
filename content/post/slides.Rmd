@@ -1,0 +1,18 @@
+---
+title: Workshop material
+description: Links to the slides are available here
+author: "Aaron Conway"
+date: 2020-03-15
+categories: []
+slug: workshop-material
+showtoc: false
+image: "https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png"
+draft: no
+---
+
+# Workshop material
+
+Please consider these materials as work in progress until the start of the course. You do *not* need to review them before the class.
+
+- [Introduction to R](https://nur1059-dataviz.netlify.com/introduction/)
+- [Data viz with ggplot2](https://nur1059-dataviz.netlify.com/visualize/)

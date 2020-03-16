@@ -1,0 +1,1 @@
+>This workshop will introduce you to performing data analysis using `R`, which is a language and environment for statistical computing. In particular, we will use the extremely popular [`ggplot2`](https://ggplot2.tidyverse.org/) package to power our visualizations.

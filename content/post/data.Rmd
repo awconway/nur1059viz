@@ -1,0 +1,81 @@
+---
+title: The data
+description: Information about the data you can use in your assignment
+author: "Aaron Conway"
+date: 2020-03-15
+categories: []
+slug: data
+showtoc: false
+image: "https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png"
+draft: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE, # show warnings during codebook generation
+  message = FALSE, # show messages during codebook generation
+  echo = FALSE
+  )
+library(tidyverse)
+library(citippy)
+citippy_path("references.bib")
+citippy_options(pandoc=FALSE)
+dementia <- readRDS(here::here("static/data/dementia.Rds"))
+
+```
+
+<center>
+
+>This dataset`r citippy('ludecke_2019')` contains quality of life assessments for patients with dementia in hospital using the QUALIDEM instrument.`r citippy('Ettema_2007')` QUALIDEM comprises 37 items reflecting 9 different subdomains of QoL. 
+
+</center>
+
+
+|Item | Number of items | Score range|
+|---|---|---|
+|QD1: care relationship |7 | 0–21 |
+| QD2: positive affect |6 | 0–18 |
+|QD3: negative affect|3 |0–9|
+|QD4: restless and tense behaviour|3 |0–9|
+|QD5: positive self-image|3 |0–9|
+|QD6: social relations|6 |0–18|
+|QD7: social isolation|3 |0–9|
+|QD8: feeling at home|4 |0–12|
+|QD9: have something to do|2 |0–6|
+
+<i class="fad fa-download"></i> Additional information about the QUALIDEM can be downloaded <a href="http://www.emgo.nl/files/2158">here</a>.
+
+
+<h2> Summary of variables</h2>
+<details>
+<summary>
+</summary>
+```{r}
+summary <- read_csv(here::here("static/data/codebook.csv"))
+
+reactable::reactable(data = summary,
+                     resizable = TRUE, 
+              showPageSizeOptions = TRUE, 
+              onClick = "expand", 
+              highlight = TRUE,
+              filterable=TRUE)
+```
+
+
+</details>
+
+<h2> All of the data</h2>
+<details>
+<summary>
+</summary>
+
+```{r data}
+reactable::reactable(data = dementia,
+                     resizable = TRUE, 
+              showPageSizeOptions = TRUE, 
+              onClick = "expand", 
+              highlight = TRUE,
+              filterable=TRUE)
+```
+
+</details>
