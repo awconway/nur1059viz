@@ -2,12 +2,12 @@
 title: Additional resources
 description: Links to resources with additional information about data visualization
 author: "Aaron Conway"
-date: 2020-03-14
+date: "`r Sys.Date()`"
 categories: []
 slug: resources
 showtoc: false
 image: "https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png"
-draft: no
+draft: false
 ---
 
 # Additional resources for ggplot2

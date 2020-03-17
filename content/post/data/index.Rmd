@@ -1,13 +1,12 @@
 ---
 title: The data
+author: Aaron Conway
+date: '2020-03-16'
 description: Information about the data you can use in your assignment
-author: "Aaron Conway"
-date: 2020-03-15
-categories: []
-slug: data
-showtoc: false
-image: "https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png"
-draft: no
+showtoc: FALSE
+image: https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png
+draft: FALSE
+output: blogdown::html_output
 ---
 
 ```{r setup, include=FALSE}
@@ -20,7 +19,7 @@ library(tidyverse)
 library(citippy)
 citippy_path("references.bib")
 citippy_options(pandoc=FALSE)
-dementia <- readRDS(here::here("static/data/dementia.Rds"))
+dementia <- readRDS("dementia.Rds")
 
 ```
 
@@ -51,7 +50,7 @@ dementia <- readRDS(here::here("static/data/dementia.Rds"))
 <summary>
 </summary>
 ```{r}
-summary <- read_csv(here::here("static/data/codebook.csv"))
+summary <- read_csv("codebook.csv")
 
 reactable::reactable(data = summary,
                      resizable = TRUE, 

@@ -1,13 +1,11 @@
 ---
 title: Workshop material
+author: Aaron Conway
+date: '2020-03-16'
 description: Links to the slides are available here
-author: "Aaron Conway"
-date: 2020-03-15
-categories: []
-slug: workshop-material
-showtoc: false
-image: "https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png"
-draft: no
+showtoc: no
+image: https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png
+draft: false
 ---
 
 # Workshop material
