@@ -7,6 +7,7 @@ showtoc: FALSE
 image: https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png
 draft: FALSE
 output: blogdown::html_output
+weight: 2
 ---
 
 ```{r setup, include=FALSE}

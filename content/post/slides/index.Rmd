@@ -6,11 +6,14 @@ description: Links to the slides are available here
 showtoc: no
 image: https://cedricscherer.netlify.com/img/ggplot-tutorial/overview.png
 draft: false
+weight: 3
 ---
 
 # Workshop material
 
 Please consider these materials as work in progress until the start of the course. You do *not* need to review them before the class.
 
-- [Introduction to R](https://nur1059-dataviz.netlify.com/introduction/)
-- [Data viz with ggplot2](https://nur1059-dataviz.netlify.com/visualize/)
+- [Introduction to R](https://nur1059-dataviz.netlify.com/slides/introduction/)
+- [Data viz with ggplot2](https://nur1059-dataviz.netlify.com/slides/visualize/)
+
+>[Slides adapted from 'Remaster the Tidyverse'](https://github.com/rstudio-education/remaster-the-tidyverse)

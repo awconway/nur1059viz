@@ -1,0 +1,112 @@
+---
+title: "Visualize Data"
+---
+
+## Your Turn 0
+
+Add a setup chunk that loads the tidyverse packages.
+
+
+
+```{r}
+dementia <- readRDS(here::here("data/dementia.Rds"))
+```
+
+
+## Your Turn 1
+
+Run the code on the slide to make a graph. Pay strict attention to spelling, capitalization, and parentheses!
+
+```{r}
+
+```
+
+## Your Turn 2
+
+Add `color`, `size`, `alpha`, and `shape` aesthetics to your graph. Experiment.  
+
+```{r}
+ggplot(data = dementia) +
+  geom_point(mapping = aes(x = age, y = QoL))
+```
+
+## Your Turn 3
+
+Add the highlighted code to your graph. What does it do?
+
+```{r}
+ggplot(data = dementia) +
+  geom_point(mapping = aes(x = age, y = QoL))
+```
+
+## Your Turn 4
+
+Replace this scatterplot with one that draws boxplots. Use the cheatsheet. Try your best guess.
+
+```{r}
+ggplot(data = dementia) +
+      geom_point(mapping = aes(x = mmse, 
+                               y = QoL))
+```
+
+## Your Turn 5
+
+Make a histogram of the `stay` variable from `dementia`. Hint: do not supply a y variable.
+
+```{r}
+
+```
+
+## Your Turn 6
+
+Make a bar chart for `mmse` with coloured bars according to the the type of dementia. Use the help page for `geom_bar` to choose a "color" aesthetic for class.
+
+```{r}
+
+```
+
+## Your Turn 7
+
+- Save your last plot and then locate it in your files pane 
+- Download it (you may have to refresh the files list)
+
+## Your Turn 8
+
+Run esquisse::esquisser() in the console and use it to create a bar chart of the number of patients who sustained a fall. Export the code to produce the plot into the chunk below so that you can reproduce it more easily. 
+
+```{r}
+
+```
+
+## Your Turn 9
+
+**Modify the code below to:**
+
+- Show participants characteristics by those who did or did not sustatin a fall
+- Include the number of hospitalizations in the past year as a rows
+- Download the table
+
+```{r}
+library(gtsummary)
+
+dementia %>% 
+  select(age, sex, stay, braden,
+         QoL, pain, pas, physres, chemicalres, fall,
+         mmse) %>% 
+  tbl_summary(by = mmse,
+    statistic = list(all_continuous() ~ "{mean} ({sd})"),
+    type = list(pain ~ "continuous"),
+     missing = "no"
+              )%>%
+  italicize_labels()
+```
+
+
+# Take away
+
+You can use this code template to make thousands of graphs with **ggplot2**.
+
+```{r eval = FALSE}
+ggplot(data = <DATA>) +
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+```
