@@ -174,7 +174,7 @@ class: center middle
 ---
 class: center middle
 
-<img src="https://pbs.twimg.com/media/D83d2-dW4AULriR?format=jpg&name=medium" />
+<img src="img/cook.jpeg" />
 
 [Source: R-ladies Newcastle](https://twitter.com/RLadiesNCL/status/1138812826917724160/photo/1)
 
