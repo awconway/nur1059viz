@@ -64,7 +64,7 @@ reactable::reactable(data = summary,
 
 </details>
 
-<h2> All of the data</h2>
+<h2> Show me all of the data</h2>
 <details>
 <summary>
 </summary>
@@ -79,3 +79,27 @@ reactable::reactable(data = dementia,
 ```
 
 </details>
+
+```{r out.width=c('50%', '50%'), fig.show='hold'}
+library(downloadthis)
+
+dementia %>% 
+  download_this(
+    output_name = "dementia",
+    output_extension = ".csv",
+    button_label = "Download data as csv",
+    button_type = "default",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+
+dementia %>% 
+  download_this(
+    output_name = "dementia",
+    output_extension = ".xlsx",
+    button_label = "Download data as excel file",
+    button_type = "default",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
