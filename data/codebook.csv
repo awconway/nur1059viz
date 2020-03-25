@@ -1,0 +1,36 @@
+name,label,data_type,ordered,value_labels,n_missing,count,min,median,max,mean,sd
+id,,numeric,,,0,,,,,,
+age,Age of Patient,numeric,,,0,,40,82,100,80.52851711,10.57427897
+sex,Gender,factor,FALSE,"1. male,2. female",0,"fem: 319, mal: 207",,,,,
+stay,Length of stay in hospital,numeric,,,0,,1,8,84,9.38973384,6.345767928
+mmse,Severity of dementia classified by mini mental status examination,factor,FALSE,"1. mild dementia,2. moderate dementia,3. severe dementia",0,"sev: 332, mod: 147, mil: 47",,,,,
+pas,Pittsburgh Agitation Scale (Scale 0 - 100; higher scores indicate worse agitation),numeric,,,0,,0,3,16,3.317490494,3.177893608
+physres,Physical restraints used,factor,FALSE,"1. no,2. yes",0,"no: 327, yes: 199",,,,,
+chemicalres,Chemical restraints used,factor,FALSE,"1. no,2. yes",0,"no: 429, yes: 97",,,,,
+QoL,Overall quality of life (scale 0 - 100; higher scores indicate better QoL),numeric,,,0,,0,47,80,47.90114068,15.6833463
+hospitalizations,Number of hospitalizations in past year,numeric,,,0,,0,4,18,4.866920152,3.500934409
+fall,Sustained a fall during admission,logical,,,0,"FAL: 472, TRU: 54",,,,0.102661597,
+injured,Injured as a result of the fall,logical,,,472,"FAL: 48, TRU: 6",,,,0.111111111,
+admission_ncf,Admitted from a nursing care facility,logical,,,0,"TRU: 313, FAL: 213",,,,0.595057034,
+kingston,Kingston Caregiver Stress Scale (higher scores indicated greater stress; possible scores range from 10 to 50),numeric,,,313,,13,31,48,31.37558685,8.314556754
+pain,Pain rating (0-10 with higher scores indicating worse pain),numeric,,,0,,0,5,9,4.990494297,1.782963008
+braden,Braden pressure injury risk score (lower scores indicate higher risk of injury; possibe scores range from 6 to 23),numeric,,,0,,8,15,21,14.84790875,2.794495508
+barthel_admission,"Barthel index for activities of daily living (Scale 0 - 100; a score of 0 indicates a client would be dependent in all assessed activities, whereas a score of 100 would reflect independence in these activities)",numeric,,,0,,0,32,100,36.72053232,29.91154955
+barthel_discharge,"Barthel index for activities of daily living (Scale 0 - 100; a score of 0 indicates a client would be dependent in all assessed activities, whereas a score of 100 would reflect independence in these activities)",numeric,,,0,,0,36,100,39.80988593,32.23671343
+infection,Infection,logical,,,0,"FAL: 480, TRU: 46",,,,,
+family_doc,Has a family doctor,logical,,,0,"TRU: 438, FAL: 88",,,,,
+QD1,QUALDIEM 1: Care relationship,numeric,,,0,,1,16,21,15.09885932,4.538692767
+QD1s,QUALDIEM 1 (severe dementia): Care relationship,numeric,,,0,,0,6,9,5.885931559,2.657301135
+QD2,QUALDIEM 2: Positive affect,numeric,,,0,,0,10,18,9.77756654,5.373120985
+QD2s,QUALDIEM 2 (severe dementia): Positive affect,numeric,,,0,,0,7,12,6.66730038,3.574187238
+QD3,QUALDIEM 3: Negative affect,numeric,,,0,,1,7,9,6.779467681,1.835324417
+QD3s,QUALDIEM 3 (severe dementia): Negative affect,numeric,,,0,,0,4,6,4.220532319,1.55558487
+QD4,QUALDIEM 4: Restless tense behaviour,numeric,,,0,,0,8,9,6.80418251,2.373998355
+QD4s,QUALDIEM 4 (severe dementia): Restless tense behaviour,numeric,,,0,,0,8,9,6.80418251,2.373998355
+QD5,QUALDIEM 5: Positive self-image,numeric,,,0,,1,8,9,7.568441065,1.520047695
+QD6,QUALDIEM 6: Social relations,numeric,,,0,,0,9,18,8.83269962,3.736888843
+QD6s,QUALDIEM 6 (severe dementia): Social relations,numeric,,,0,,0,6,9,5.336501901,2.247300672
+QD7,QUALDIEM 7: Social isolation,numeric,,,0,,0,6,9,6.16539924,2.262998544
+QD7s,QUALDIEM 7 (severe dementia): Social isolation,numeric,,,0,,0,6,9,6.16539924,2.262998544
+QD8,QUALDIEM 8: Feeling at home,numeric,,,0,,1,8,12,7.505703422,1.903121691
+QD9,QUALDIEM 9: Having something to do,numeric,,,0,,0,1,6,1.642585551,1.503523534

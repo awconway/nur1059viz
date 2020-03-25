@@ -1,0 +1,111 @@
+---
+title: "Transform Data"
+---
+
+```{r setup}
+library(tidyverse)
+```
+
+# Import Data
+
+## Your Turn 1
+
+- Download a csv or excel file (your choice) of the dementia dataset from the workshop webpage
+- Upload it to RStudio cloud into a new folder called 'data'
+- Import the data set using the GUI (name the dataset `dementia`).
+- Try the code approach (below) to importing data with the here package for 'safe' file paths.
+
+```{r}
+# don't forget to 
+#dementia <- read_csv(here::here("data","dementia.csv"))
+#dementia <- readxl::read_excel(here::here("data", "dementia.xlsx"))
+```
+
+# dplyr
+
+## Your Turn 2
+
+Alter the code to select just the `mmse` column:
+
+```{r }
+select(dementia, id, age) 
+```
+
+## Your Turn 3
+
+Use `filter`, `dementia`, and the logical operators to find:
+
+- All of the patients where length of stay is greater than or equal to 5
+- All of the patients who had both chemical *and* physical restraints
+
+
+```{r}
+
+```
+
+## Your Turn 4
+
+Use `%>%` to write a sequence of functions that: 
+
+1. Filters mmse to just the patients with mild dementia, *then...*  
+2. Selects the quality of life and number of hospitalizations columns, *then...*  
+
+```{r}
+```
+
+## Your Turn 5
+
+Use `mutate()` and `case_when` to create a variable called stay_category that assigns length of stay into the categories 'short' (1-3 days), 'moderate' (4-8 days) and 'long' (>8 days).
+
+*(Hint: Be sure to remove each `_` before running the code)*
+
+```{r}
+dementia <- dementia %>% 
+  ______(stay_category = case_when(stay < _ ~ "short",
+                                   stay < _ & ___ > _ ~ "moderate",
+                                   ___ _ _ ~ ___)
+         )
+
+# check your result
+dementia %>% 
+  select(stay, stay_category)
+```
+
+
+## Your Turn 6
+
+Complete the code below to extract the rows where `chemicalres == "yes"`. Then use `summarise()` and `sum()` and `min()` to find:
+
+1. The total number of females
+2. The lowest number of hospitalisations
+
+*(Hint: Be sure to remove each `_` before running the code)*
+
+```{r}
+dementia ___ 
+  filter(_______________________) ___
+  ___________(total_female = ________, shorted_hospitalisation = _______)
+
+```
+
+## Your Turn 7
+
+- Install the `infer` package by running `install.packages("infer")` in the console.
+- Load the `infer` package so you can use its functions
+- Use a t test to determine if length of stay is associated with sustaining a fall whilst in hospital
+
+```{r}
+
+```
+
+# Take aways
+
+* Extract variables with `select()`  
+* Extract cases with `filter()`  
+
+* Make tables of summaries with `summarise()`  
+* Make new variables, with `mutate()`  
+
+* Connect operations with `%>%`  
+
+

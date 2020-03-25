@@ -14,3 +14,7 @@ weight: 4
 
 - [R Graph Gallery](https://www.r-graph-gallery.com/)
 - [ggplot2 beginner tutorial](https://ggplot2tutor.com/beginner_tutorial/beginner_tutorial/)
+
+# Learning R
+
+- [R Bootcamp](https://r-bootcamp.netlify.com/)

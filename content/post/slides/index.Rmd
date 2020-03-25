@@ -15,5 +15,11 @@ Please consider these materials as work in progress until the start of the cours
 
 - [Introduction to R](https://nur1059-dataviz.netlify.com/slides/introduction/)
 - [Data viz with ggplot2](https://nur1059-dataviz.netlify.com/slides/visualize/)
+- [Transforming data with dplyr](https://nur1059-dataviz.netlify.com/slides/transform/)
+- Exercises for transforming data (
+```{r echo=FALSE}
+xfun::embed_file(here::here("static", "slides", "transform", 'exercises.Rmd'))
+```
+)
 
 >[Slides adapted from 'Remaster the Tidyverse'](https://github.com/rstudio-education/remaster-the-tidyverse)
